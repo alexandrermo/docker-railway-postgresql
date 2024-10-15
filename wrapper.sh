@@ -50,6 +50,7 @@ unset PGPORT
 
 echo "shared_preload_libraries = 'auth_delay'" >> $POSTGRES_CONF_FILE
 echo "auth_delay.milliseconds = '20000'" >> $POSTGRES_CONF_FILE
+echo "max_connections = 100" >> $POSTGRES_CONF_FILE
 
 # Call the entrypoint script with the
 # appropriate PGHOST & PGPORT and redirect
